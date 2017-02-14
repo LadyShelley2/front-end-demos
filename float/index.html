@@ -6,7 +6,6 @@
     <style type="text/css">
         .container{
             width:250px;
-            height:250px;
             position: relative;
             border: solid #363636 4px;
             margin: 30px 30px 30px 0;
@@ -48,7 +47,6 @@
             left: 0;
             color:#666;
         }
-
     </style>
 </head>
 <body>
@@ -58,12 +56,12 @@
     <div class= " container fl">
         <div class="box1 "></div>
         <div class="box2 "></div>
-        <span class="tag">浮动前</span>
+        <span class="tag " style="position:absolute; bottom:-30px">浮动前
     </div>
     <div class="container fl ">
         <div class="box1  fl"></div>
         <div class="box2 "></div>
-        <span class="tag">浮动后</span>
+        <span class="tag " style="position:absolute; top:240px">浮动后
     </div>
 </div>
 
@@ -72,28 +70,54 @@
         <div class="box1 "></div>
         <p >码蜂社前端学习社区，生命不息，折腾不止。码蜂社前端学习社区，生命不息，折腾不止。码蜂社前端学习社区，生命不息，折腾不止。
         </p>
-        <span class="tag">浮动前</span>
+        <span class="tag " style="position:absolute; bottom:-30px ">浮动前
     </div>
     <div class="container fl ">
         <div class="box1 fl "></div>
         <p >码蜂社前端学习社区，生命不息，折腾不止。码蜂社前端学习社区，生命不息，折腾不止。码蜂社前端学习社区，生命不息，折腾不止。
         </p>
-        <span class="tag">浮动后</span>
+        <span class="tag " style="position:absolute; top:160px">浮动后
     </div>
 </div>
 
 <div class="clearfix">
-    <div class= "container fl">
-        <div class="box1  "></div>
-        <div class="box2  "></div>
-        <span class="tag">浮动前</span>
+    <div class="fl"  style="
+            margin: 30px 30px 30px 0;position: relative;" >
+        <div  style="width: 250px; border: solid #363636 4px;">
+            <div class="box1  "></div>
+            <div class="box2  "></div>
+        </div>
+        <span class="tag " style="position:absolute; top:240px">浮动前</span>
     </div>
-    <div class="fl"  style=" margin-top:30px;position: relative;" >
+    <div class="fl"  style="
+            margin: 30px 30px 30px 0; position: relative;" >
         <div  style="width: 250px; border: solid #363636 4px;">
             <div class="box1  fl"></div>
             <div class="box2  fr"></div>
         </div>
-        <span class="tag " style="position:absolute; top:230px">浮动后</span>
+        <span class="tag " style="position:absolute; top:240px">浮动后</span>
+    </div>
+</div>
+
+<div class="container">
+    <div class="box1  "></div>
+    <div class="box2  "></div>
+</div>
+<div class="container">
+    <div class="box1  fl"></div>
+    <div class="box2  fr"></div>
+    <div style="clear:both"></div>
+</div>
+
+
+<div class="clearfix">
+    <div class= " container fl">
+        <div class="box1 "></div>
+        <div class="box2 "></div>
+    </div>
+    <div class="container fl ">
+        <div class="box1  fl"></div>
+        <div class="box2 " style="clear: both"></div>
     </div>
 </div>
 

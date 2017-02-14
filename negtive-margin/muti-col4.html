@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>负边距三列布局</title>
+    <style>
+        .container{
+            overflow: hidden;
+        }
+
+        .wrap{
+            float: left;
+            width:100%;
+        }
+
+        .left{
+            float:left;
+            width:120px;
+            margin-left: -100%;
+            background: red;
+        }
+
+        .right{
+            float:left;
+            width: 150px;
+            margin-left: -150px;
+            background: green;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="wrap">
+        <div class="main">center
+        </div>
+    </div>
+    <div class="left">left
+    </div>
+    <div class="right">right
+    </div>
+</div>
+</body>
+</html>

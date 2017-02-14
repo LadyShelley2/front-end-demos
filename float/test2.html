@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .container{
+            width:250px;
+            height:250px;
+            position: relative;
+            border: solid #363636 4px;
+            margin: 30px 30px 30px 0;
+        }
+        .fl{
+            float: left;
+        }
+        .fr{
+            float: right;
+        }
+        .box1{
+            /*float: left;*/
+            border: solid #363636 4px;
+            background-color:#FFD700;
+            width: 70px;
+            height: 70px;
+        }
+
+        .box2{
+            border: solid #363636 4px;
+            background-color:#66CD00;
+            width: 140px;
+            height: 140px;
+        }
+        .clearfix:after{
+            content:'.';
+            display: block;
+            height: 0;
+            visibility: hidden;
+            clear: both;
+        }
+        .container p{
+            color:#333;
+            font: 12px/1.5 Tahoma,Helvetica,Arial,'宋体',sans-serif;
+        }
+        .tag{
+            position: absolute;
+            bottom: 2px;
+            left: 0;
+            color:#666;
+        }
+    </style>
+</head>
+<body>
+
+<div class="clearfix">
+<div class="container fl">
+    <div class="box1 fl"></div>
+    <p>单框向左浮动，文本环绕在左右，浮动元素不会超过父元素的左边界，顶端不会超过父元素顶端。单框向左浮动，文本环绕在左右，浮动元素不会超过父元素的左边界，顶端不会超过父元素顶端。</p>
+</div>
+
+<div class="container fl">
+    <div class="box1 fl"></div>
+    <div class="box2 fl"></div>
+    <p>两框都向左浮动，绿框按照顺序排在黄框后，文字仍然环绕左右</p>
+</div>
+
+<div class="container fl">
+    <div class="box2 fl"></div>
+    <p>两框都向左浮动，由于段落元素在两个框元素的中间，因此会先渲染文字。在此基础上，黄框会选择尽可能高的位置浮动。</p>
+    <div class="box1 fl"></div>
+</div>
+
+<div class="container fl">
+    <div class="box1 fl"></div>
+    <div class="box2 fl"></div>
+    <div class="box1 fl"></div>
+    <p>三框都向左浮动，依次显示，段落元素在最后。第二个黄框被挤到下面来，文本元素仍然环绕</p>
+</div>
+
+<div class="container fl">
+    <div class="box1 fl"></div>
+    <div class="box2 fl"></div>
+    <div class="box2 fl"></div>
+    <p>如果浮动元素太大，会超出父元素的边界。</p>
+</div>
+</div>
+</body>
+</html>
